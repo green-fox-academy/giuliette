@@ -1,4 +1,5 @@
 # giuliette
 [GitHub](https://github.com/green-fox-academy/giuliette.git)
-[GitHub](https://github.com/giuliette/hello-world.git)
-[GitHub](https://github.com/giuliette/patchwork.git)
+[HelloWorld](https://github.com/giuliette/hello-world.git)
+[Patchwork](https://github.com/giuliette/patchwork.git)
+[Really-Syllabus](https://github.com/green-fox-academy/really-syllabus)
