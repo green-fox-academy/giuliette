@@ -4,7 +4,7 @@ export {}
 
 // Define several things as a variable, then print their values
 // Your name as a string
-let myName: string ="Juli";
+let myName: string =("Juli");
 // Your age as an integer
 let a: number = 10;
 // Your height in meters as a float
@@ -13,4 +13,4 @@ let h: number = 1.72;
 let maritalStatus: boolean = (false);
 
 
-console.log(myName + a + h + maritalStatus);
+console.log(myName + " " + a + " " + h + " " + maritalStatus);
