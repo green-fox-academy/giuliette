@@ -1,12 +1,13 @@
 'use strict';
-export{};
+export { };
+
 // -  Create a function called `factorio`
 //    that returns it's input's factorial
-function factorial( x : number) : number {
+function factorial(x: number): number {
     let sum: number = 1;
-    for (let a : number = 1; a <= x; a++) {
-        sum*=a;
-    
+    for (let a: number = 1; a <= x; a++) {
+        sum *= a;
+
     }
     return sum;
 }
@@ -23,7 +24,7 @@ function factorio(num: number){
     } else{
         return num * (factorio(num-1));
     }
-}
+} 
 
 console.log(factorio(5));
 */

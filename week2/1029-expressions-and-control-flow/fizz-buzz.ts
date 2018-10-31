@@ -1,6 +1,5 @@
-
 'use strict';
-export {};
+export { };
 
 // Write a program that prints the numbers from 1 to 100.
 // But for multiples of three print “Fizz” instead of the number
@@ -10,12 +9,12 @@ export {};
 let n: number = 1;
 
 while (n < 100) {
-  if (n % 3 === 0 && n % 5 === 0) {
-    console.log("fizzbuzz");
+    if (n % 3 === 0 && n % 5 === 0) {
+        console.log("fizzbuzz");
     } else if (n % 3 === 0) {
-    console.log("fizz");
+        console.log("fizz");
     } else if (n % 5 === 0) {
-    console.log("buzz");
+        console.log("buzz");
     } else {
         console.log(n);
     }

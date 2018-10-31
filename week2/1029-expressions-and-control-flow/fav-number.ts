@@ -1,4 +1,5 @@
 'use strict';
+export {}
 
 let favoriteNumber: number = 13;
 let txt: string = "My favorite number is: "

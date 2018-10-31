@@ -9,21 +9,12 @@ export{};
 //     -  Prepare for the special case when no parameters are given
 // -  Greet `name`
 
-/*
 let name: string = "Greenfox";
 
 function greet(Hello:string = "whatevs") {
-    if(Hello !== void 0){
+    if(Hello === void 0){
         console.log(greet + Hello);
     }
 }
 
 greet(name);
-*/
-
-function greetByName(name: string) {
-    console.log('Well hi there,', name);
-  }
-  
-  greetByName('Tojas');
-  greetByName('Barbi', 'CEO');

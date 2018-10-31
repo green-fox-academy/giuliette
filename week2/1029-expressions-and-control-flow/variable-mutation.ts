@@ -48,7 +48,7 @@ console.log(i1 < i2 ** 3);
 
 let j: number = 1521;
 // tell if j is divisible by 3 or 5 (as a boolean)
-console.log(j % 3 === 0 || j % 5 === 0); 
+console.log(j % 3 === 0 || j % 5 === 0);
 
 let k: string = 'Apple';
 // fill the k variable with its content 4 times

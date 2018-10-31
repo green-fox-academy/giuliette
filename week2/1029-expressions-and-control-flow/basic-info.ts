@@ -1,6 +1,5 @@
-export {}
-
 'use strict';
+export {}
 
 // Define several things as a variable, then print their values
 // Your name as a string
@@ -11,6 +10,5 @@ let a: number = 10;
 let h: number = 1.72;
 // Whether you are married or not as a boolean
 let maritalStatus: boolean = (false);
-
 
 console.log(myName + " " + a + " " + h + " " + maritalStatus);
