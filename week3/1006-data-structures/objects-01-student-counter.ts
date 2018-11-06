@@ -26,9 +26,9 @@ candyTotal(students);
 
 function ageTotal(list: any[]): void {
   let ageTotal: number = 0;
-  for (let i = 0; i < list.length; i++) {
+  /*for (let i = 0; i < list.length; i++) {
     if (list[i].candies < 5) {ageTotal += list[i].age;}
-  }
+  }*/
   list.forEach(function (student) { // student => { ... }  =  function (student) { ... }
     if (student.candies < 5) {
       ageTotal += student.age;
