@@ -11,11 +11,8 @@ const ctx = canvas.getContext('2d');
 // for loop 
 
 function checkerboard(x, y) {
-
   ctx.strokeStyle = 'black';
-
   ctx.fillRect(x, y, 40, 40);
-
 }
 
 for (let i = 0; i < canvas.width; i++) {
