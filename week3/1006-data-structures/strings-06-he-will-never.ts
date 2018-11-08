@@ -19,7 +19,6 @@ let hashmap = {
 
 notSoCrypticMessage.forEach(function(element) {
   out += hashmap[element]
-  //out -hoz a hashmap adott index\ elemet$
 });
 
 console.log(out)
