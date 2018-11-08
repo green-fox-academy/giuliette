@@ -15,6 +15,7 @@ function quoteSwap(list: string[]) {
   return list
 }
 
-console.log(quoteSwap(words));
+//console.log(quoteSwap(words));
+console.log(words.join(' '))
 
 export = quoteSwap;
