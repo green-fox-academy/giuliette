@@ -3,19 +3,31 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-function lineCreator(xfrom, yfrom) {
-  ctx.strokeStyle = 'red';
+for (let i = 10; i < 600; i += 10) {
+  let x = i;
+  let y = 400 - i;
+  ctx.strokeStyle = 'green';
   ctx.beginPath();
-  ctx.moveTo(xfrom, yfrom);
-  ctx.lineTo(0, 0);
+  ctx.moveTo(x, 0);
+  ctx.lineTo(400, x);
+  ctx.stroke();
+}
+for (let i = 10; i < 600; i += 10) {
+  let x = 400 - i;
+  let y = i;
+  ctx.strokeStyle = 'blue';
+  ctx.beginPath();
+  ctx.moveTo(0, x);
+  ctx.lineTo(x, 400);
   ctx.stroke();
 }
 
-
-for (let i = 0; i <= canvas.width; i += 20) {
-  for (let j = 0; j <= canvas.height; j += 20) {
-    if (j === 0 || i === 0 || i === canvas.width || j === canvas.height) {
-      lineCreator(i, j);
-    }
-  }
+/*
+function lineCreator(xfrom, yto) {
+  ctx.strokeStyle = 'red';
+  ctx.beginPath();
+  ctx.moveTo(xfrom, 0);
+  ctx.lineTo(0, yto);
+  ctx.stroke();
 }
+*/
