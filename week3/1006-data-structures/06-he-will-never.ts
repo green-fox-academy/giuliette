@@ -17,6 +17,9 @@ let hashmap = {
   3: 'say goodbye '
 };
 
-notSoCrypticMessage.forEach(){ //function element
+notSoCrypticMessage.forEach(function(element) {
+  out += hashmap[element]
   //out -hoz a hashmap adott index\ elemet$
-}
+});
+
+console.log(out)
