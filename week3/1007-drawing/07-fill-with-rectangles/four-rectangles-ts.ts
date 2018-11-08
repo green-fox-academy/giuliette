@@ -10,10 +10,12 @@ const ctx = canvas.getContext('2d');
 
 
 function rectangles (blue, x, y) {
-  ctx.strokeStyle = `rgb(0, 0, ${blue} )`;
+  //ctx.strokeStyle = 'black';
+  ctx.fillStyle = 'purple';
   ctx.fillRect(x, y, 100, 100);
 }
 
 for (let i = 0; i < 4; i++){
   rectangles(i * 90, i * 20, i * 20);
 }
+
