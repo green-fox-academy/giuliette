@@ -18,7 +18,7 @@ function clearSky() {
   let color = getRandomNum(0, 255);
   let x = getRandomNum(0, 600);
   let y = getRandomNum(0, 400);
-  ctx.fillStyle = `rgb(${color},${color},${color})`;
+  ctx.fillStyle = `rgb(10,${color},${color})`;
   ctx.fillRect(x, y, 3, 3);
 }
 
