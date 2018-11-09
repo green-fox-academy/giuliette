@@ -3,27 +3,18 @@
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
 
-ctx.strokeStyle = 'green';
-ctx.beginPath();
-ctx.moveTo(100,50);
-ctx.lineTo(150,50);
-ctx.lineTo(125,0);
-ctx.lineTo(100,50);
-ctx.stroke();
+function drawTriangle(x: number, y: number):void {
+  ctx.strokeStyle = 'red';
+  ctx.beginPath();
+  ctx.moveTo(x, y); //x,y
+  ctx.lineTo(x + 50, y); //x+50,y
+  ctx.lineTo(x + 25, y - 50); //x*1.5, y-50
+  ctx.lineTo(x, y); //x, y
+  ctx.stroke();
+}
 
-ctx.strokeStyle = 'blue';
-ctx.beginPath();
-ctx.moveTo(150,50);
-ctx.lineTo(200,50);
-ctx.lineTo(175,0);
-ctx.lineTo(150,50);
-ctx.stroke();
-
-//function drawOneTriangle(x: number){}
-ctx.strokeStyle = 'red';
-ctx.beginPath();
-ctx.moveTo(50,50); //x,y
-ctx.lineTo(100,50); //x+50,y
-ctx.lineTo(75,0); //x*1.5, y-50
-ctx.lineTo(50,50); //x, y
-ctx.stroke();
+for (let i = 0; i < canvas.width; i += 50) {
+  for (let j = 0; j < canvas.height; j += 50) {
+    drawTriangle(i, j);
+  }
+}
