@@ -8,10 +8,10 @@ const numbers: number[] = [1, 2, 3, 4, 5, 6, 8];
 // Do this again with a different solution using different list functions!
 
 function containsSeven(list: number[]) {
-  if (list.includes(7)) {
+  if (list.includes('7')) {
     return "Hoorray"
   } else {
-    return "Nooooo"
+    return "Nope"
   }
 }
 console.log(containsSeven(numbers));

@@ -5,10 +5,10 @@ export {}
 // Your name as a string
 let myName: string =("Juli");
 // Your age as an integer
-let a: number = 10;
+let age: number = 10;
 // Your height in meters as a float
-let h: number = 1.72;
+let height: number = 1.72;
 // Whether you are married or not as a boolean
 let maritalStatus: boolean = (false);
 
-console.log(myName + " " + a + " " + h + " " + maritalStatus);
+console.log(myName + ", (" + age + ") " + height + " " + maritalStatus);

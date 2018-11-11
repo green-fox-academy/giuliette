@@ -15,7 +15,7 @@ function drawTriangle(x: number, y: number): void {
   ctx.stroke();
 }
 
-for (let i = 0; i < canvas.width / side; i++) {
+for (let i = 0; i < canvas.width / 2; i++) {
   for (let j = i; j < canvas.height / triangleHeight; j++) {
     drawTriangle(i * side, j * side)
   }

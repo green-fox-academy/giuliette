@@ -24,5 +24,5 @@ let number: number = 15;
 let t: number = 1;
 
 for (number; t <= 10; t++) {
-    console.log(number + "*" + t + "=" + number * t);
+    console.log(number + " * " + t + " = " + number * t);
   }

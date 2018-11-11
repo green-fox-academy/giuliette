@@ -8,7 +8,8 @@ export { };
 
 let n: number = 1;
 
-while (n < 100) {
+while (n <= 100) {
+    //console.log(n + "is");
     if (n % 3 === 0 && n % 5 === 0) {
         console.log("fizzbuzz");
     } else if (n % 3 === 0) {
