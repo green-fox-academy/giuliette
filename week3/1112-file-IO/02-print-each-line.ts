@@ -12,7 +12,12 @@ function readFromFile(fileName: string): string {
     return fs.readFileSync(fileName, 'utf-8');
   } catch(e) {
     console.log(e.message);
-    return 'Unable to read file: my-file.txt';
+    return 'Unable to read file: myfile.txt';
   }
 }
+
 console.log(readFromFile('my-file.txt'));
+//console.log(readFromFile('myfile.txt'));
+
+//ENOENT: no such file or directory, open 'myfile.txt'
+//Unable to read file: myfile.txt
