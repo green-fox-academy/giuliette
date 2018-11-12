@@ -8,12 +8,17 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
-function sweets (list:any[]){
-  list.splice(0, 4, 'cupcake', 'croissant', 'brownie', 'icecream');
-  return list;
+function sweets(array) {
+  array.map(e => {
+    if (e === 2) {
+      array[array.indexOf(e)] = "Croissant";
+    } else if (e === false) {
+      array[array.indexOf(e)] = "Ice cream";
+    }
+  });
+  return array;
 }
 
 console.log(sweets(shopItems));
 
 export = sweets;
-
