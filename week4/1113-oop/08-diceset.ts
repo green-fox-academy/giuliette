@@ -39,7 +39,7 @@ diceSet.roll();
 //diceSet.getCurrent();
 
 while (!diceSet.dices.every(e => e === 6)) {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < this.numOfDices; i++) {
     if (diceSet.dices[i] !== 6) {
       diceSet.reroll(i);
     } 
