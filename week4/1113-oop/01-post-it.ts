@@ -7,7 +7,7 @@
 // a pink with black text: "Awesome"
 // a yellow with green text: "Superb!"
 
-class postIt {
+class PostIt {
   backgroundColor: string;
   text: string;
   textcolor: string;
@@ -19,9 +19,9 @@ class postIt {
 }
 
  //var object_name = new class_name([ arguments ])
-var postItNoteOne = new postIt ('orange','Idea 1','blue');
-var postItNoteTwo = new postIt ('pink', 'awesome', 'black');
-var postItNoteThree = new postIt ('yellow', 'Superb!', 'green')
+var postItNoteOne = new PostIt ('orange','Idea 1','blue');
+var postItNoteTwo = new PostIt ('pink', 'awesome', 'black');
+var postItNoteThree = new PostIt ('yellow', 'Superb!', 'green')
 
 console.log(postItNoteOne);
 console.log(postItNoteTwo);
