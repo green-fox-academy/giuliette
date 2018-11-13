@@ -8,7 +8,7 @@
 
 export { };
 
-class animal {
+class Animal {
   hungerValue: number;
   thirstValue: number;
   constructor(hungerV: number = 50, thirstV: number = 50){
@@ -22,8 +22,12 @@ class animal {
     return this.thirstValue + 1;
   }
   play(): any {
-    return this.thirstValue - 1, this.hungerValue - 1;
+    return `${this.eat()}, ${this.drink()}`
   }
 }
 
+let kiskutya = new Animal();
+let kiscica = new Animal();
 
+console.log('kiskutya: ', kiskutya.play());
+console.log('kiscica: ', kiscica.eat());
