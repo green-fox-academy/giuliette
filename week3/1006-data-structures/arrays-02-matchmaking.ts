@@ -6,13 +6,13 @@ export { };
 let girls: string[] = ['Eve', 'Ashley', 'Claire', 'Kat', 'Jane'];
 let boys: string[] = ['Joe', 'Fred', 'Tom', 'Todd', 'Neef', 'Jeff'];
 
-function makingMatches(arr1: string[], arr2: string[]): string {
-  let pairs:string [] = [];
-  for (let i = 0; i < arr2.length; i++) {
+function makingMatches(arr1: string[], arr2: string[]): string[] {
+  let pairs: string[] = [];
+  for (let i:number = 0; i < arr2.length; i++) {
     if (arr1[i]) {
-      pairs.push(girls[i])
+      pairs.push(girls[i]);
     }
-    pairs.push(boys[i])
+    pairs.push(boys[i]);
   }
   return pairs;
 }
