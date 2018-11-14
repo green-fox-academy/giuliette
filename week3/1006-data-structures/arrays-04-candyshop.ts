@@ -1,6 +1,7 @@
 'use strict';
 
 let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
+
 //1 /croissant 3icecream
 // Accidentally we added "2" and "false" to the array.
 // Your task is to change from "2" to "Croissant" and change from "false" to "Ice cream"
@@ -8,12 +9,12 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
 
-function sweets(array) {
-  array.map(e => {
+function sweets(array:any[]):string[] {
+  array.map((e, i) => {
     if (e === 2) {
-      array[array.indexOf(e)] = "Croissant";
+      array[i] = "Croissant";
     } else if (e === false) {
-      array[array.indexOf(e)] = "Ice cream";
+      array[i] = "Ice cream";
     }
   });
   return array;
