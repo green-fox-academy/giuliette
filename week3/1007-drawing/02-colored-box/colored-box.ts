@@ -1,4 +1,3 @@
-
 'use strict';
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
