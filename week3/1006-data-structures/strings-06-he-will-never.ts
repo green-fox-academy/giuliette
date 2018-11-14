@@ -1,4 +1,5 @@
 'use strict';
+
 // Things are a little bit messed up
 // Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
 // Assemble the fragments into the out variable
@@ -17,8 +18,8 @@ let hashmap = {
   3: 'say goodbye '
 };
 
-notSoCrypticMessage.forEach(function(element) {
+notSoCrypticMessage.forEach(element => {
   out += hashmap[element]
 });
 
-console.log(out)
+console.log(out);
