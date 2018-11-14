@@ -6,28 +6,30 @@
 // We can use() the sharpie objects
 // which decreases inkAmount
 
-export { };
+export { Sharpie };
 
 class Sharpie {
   color: string;
   width: number;
   inkAmount: number;
+
   constructor (color: string, penWidth: number = 20, inkAmount: number = 100){
     this.color = color;
     this.width = penWidth;
     this.inkAmount = inkAmount;
   }
   use(): number {
-    return this.inkAmount - 2;
+    return this.inkAmount - 10;
   }
 }
 
 let blueSharpie = new Sharpie('red');
 let redSharpie = new Sharpie('blue');
 
-console.log('my favourite sharpie is: ',blueSharpie);
-console.log('my second favourite sharpie is: ', redSharpie);
+//console.log('my favourite sharpie is: ',blueSharpie);
+//console.log('my second favourite sharpie is: ', redSharpie);
 
 // so:
 
-console.log('I used it a lot.. so now: ', blueSharpie.use());
+//console.log('I used it a lot.. so now: ', blueSharpie.use());
+
