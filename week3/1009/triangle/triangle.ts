@@ -15,9 +15,17 @@ function drawTriangle(x: number, y: number): void {
   ctx.stroke();
 }
 
+/*for (let i = 0; i < canvas.width / 2; i++) {
+  for (let j = i; j < canvas.height / triangleHeight; j++) {
+    drawTriangle(i * side-(j*side/2), j * side)
+  }
+}*/
+
 for (let i = 0; i < canvas.width / 2; i++) {
   for (let j = i; j < canvas.height / triangleHeight; j++) {
-    drawTriangle(i * side, j * side)
+    //drawTriangle(i * side, j * side)
+    //drawTriangle(i * side-(j*side/2)+side*3.5, j * side) //50
+    drawTriangle(i * side - (j * side / 2) + side * 1.5, j * side)
   }
 }
 
