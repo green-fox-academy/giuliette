@@ -12,14 +12,13 @@ class Thing {
     this.completed = true;
   }
 
-  public getName() {
+  public get Name() {
     return this.name;
   }
 
-  public getCompleted() {
+  public get Completed() {
     return this.completed;
   }
-
 }
 
 export { Thing };
