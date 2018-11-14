@@ -13,9 +13,8 @@ function writeToMyFile(fileName: string, data: string): void {
   //  fs.writeFileSync(fileName, data);
   if (fs.existsSync(fileName)) {
     fs.appendFileSync(fileName, data);
-    console.log('kiskutza');
-  } 
-  else {
+    console.log('kiskutya');
+  } else {
     console.log(`Unable to write file: ${fileName}`);
   }
 }
