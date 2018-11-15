@@ -1,0 +1,12 @@
+function fileRead () {
+  try { 
+    ...
+  }
+  catch (e){
+    return null
+  }
+}
+
+let valtozo = fileRead
+if valtozo !== null
+minden fasza

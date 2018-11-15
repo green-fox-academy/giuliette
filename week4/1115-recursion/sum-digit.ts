@@ -12,7 +12,4 @@ function sumDigits(n: number): number {
   return 0;
 }
 
-console.log(sumDigits(1352));
-
-
-
+console.log(sumDigits(126));

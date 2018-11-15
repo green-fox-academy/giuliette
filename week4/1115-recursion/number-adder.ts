@@ -8,4 +8,4 @@ function numberAdder(n: number): number {
   }
 }
 
-console.log(numberAdder(5));
+console.log(numberAdder(0));
