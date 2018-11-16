@@ -10,10 +10,10 @@
 // answer()
 
 class Teacher {
+  answer(){};
   teach(student: Student){
     student.learn();
   }
-  answer(){};
 }
 
 class Student {
