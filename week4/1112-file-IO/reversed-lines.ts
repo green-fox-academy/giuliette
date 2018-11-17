@@ -13,15 +13,14 @@ function readFromFile(fileName: string): string {
   }
 }
 
-function reverseLines(fileName) {
+function reverseLines(fileName: string):string {
   let notGoodLines: string[] = readFromFile(fileName).split('\n');
-  let goodLines: any[] = [];
+  let goodLines: string[] = [];
 
-  notGoodLines.forEach((element, i) => {
-    goodLines.push(element);
-
+  notGoodLines.forEach((element) => {
+    goodLines.push(element.split('').reverse().join(''));
   })
-  return goodLines.reverse();
+  return goodLines.join('\n');
 }
 
 console.log(reverseLines('reversed-lines.txt'));
