@@ -13,7 +13,7 @@ function readFromFile(fileName: string): string {
   }
 }
 
-function reverseLines(fileName: string):string {
+function reverseLines(fileName: string): string {
   let notGoodLines: string[] = readFromFile(fileName).split('\n');
   let goodLines: string[] = [];
 
