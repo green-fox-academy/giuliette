@@ -11,7 +11,7 @@ export{};
 let numList = [3, 4, 5, 6, 7].reverse();
 console.log(numList);
 let reversed = numList.reverse();
-console.log(numList);
+console.log(reversed);
 
 
 //+(nemreverse-vel! eredeti sorrend)
