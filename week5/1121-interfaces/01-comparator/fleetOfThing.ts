@@ -2,8 +2,6 @@
 import { Thing } from "./thing";
 import { Fleet } from "./fleet";
 
-let fleet = new Fleet();
-
 /* Crete a fleet of things to have this output:
 1. [ ] Get milk
 2. [ ] Remove the obstacles
@@ -11,18 +9,25 @@ let fleet = new Fleet();
 4. [x] Eat lunch
 // Hint: You have to create a `print()` method as well */
 
+let fleet = [];
 
 let thing1 = new Thing('Get milk');
 let thing2 = new Thing('remove the obstacles');
 let thing3 = new Thing('stand up');
 let thing4 = new Thing('eat lunch');
 
-thing3.complete();
+thing1.complete();
 thing4.complete();
 
-fleet.add(thing1); 
-fleet.add(thing2);
-fleet.add(thing3);
-fleet.add(thing4);
+fleet.push(thing1); 
+fleet.push(thing2);
+fleet.push(thing3);
+fleet.push(thing4);
 
-fleet.print();
+//fleet.print();
+
+fleet.sort(function(a: Thing, b: Thing) {
+  return a.compareTo(b);
+})
+
+console.log(fleet);

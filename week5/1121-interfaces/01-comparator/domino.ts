@@ -9,7 +9,7 @@ export class Domino implements Comparable {
     this.values = [valueA, valueB];
   }
 
-  compareTo(other: Domino){
+  compareTo(other: Domino): number{
     return this.values[0] - other.values[0]; 
     // if (this.values[1] < other.values[0]){
     //   return -1;
