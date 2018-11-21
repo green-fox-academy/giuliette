@@ -12,9 +12,9 @@ function divide(a: number, b: number): number {
 }
 
 try {
-  console.log(divide(10, 0));
+  console.log(divide(10, 2));
 } catch (e) {
   console.log(e.message);
 } finally {
-  console.log('cica');
+  console.log('appears at all cases');
 }
