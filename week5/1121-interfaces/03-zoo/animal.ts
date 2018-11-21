@@ -4,13 +4,15 @@ export abstract class Animal {
   name: string;
   age: number;
   color: string;
+  health: number;
 
-  constructor(name: string, age: number){
+  constructor(name: string, age: number, color: string, health: number) {
     this.name = name;
     this.age = age;
+    this.color = color;
+    this.health = health;
   }
 
-  abstract getName();
-  abstract breed();
-  abstract sound();
+  abstract getName(): string;
+  abstract breed(): string;
 }
