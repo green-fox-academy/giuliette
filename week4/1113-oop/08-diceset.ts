@@ -4,15 +4,15 @@ class DiceSet {
 
   roll(): number[] {
     this.dices = [];
-    for (var i = 0; i < this.numOfDices; i++) {
+    for (let i = 0; i < this.numOfDices; i++) {
       this.dices.push(Math.floor(Math.random() * 6 + 1));
     }
     return this.dices;
   }
 
-  reroll(index?: number) {
+  reroll(index?: number):void {
     if (index == undefined) {
-      for (var i = 0; i < this.numOfDices; i++) {
+      for (let i = 0; i < this.numOfDices; i++) {
         this.dices[i] = Math.floor(Math.random() * 6 + 1);
       }
     } else {
@@ -20,9 +20,9 @@ class DiceSet {
     }
   }
 
-  getCurrent(index?: number) {
+  getCurrent(index?: number):void {
     if (index == undefined) {
-      for (var i = 0; i < this.numOfDices; i++) {
+      for (let i = 0; i < this.numOfDices; i++) {
         console.log(this.dices[i]);
       }
     } else {
@@ -39,7 +39,7 @@ diceSet.roll();
 //diceSet.getCurrent();
 
 while (!diceSet.dices.every(e => e === 6)) {
-  for (let i = 0; i < this.numOfDices; i++) {
+  for (let i = 0; i < this.numOfDices; i++) { //type
     if (diceSet.dices[i] !== 6) {
       diceSet.reroll(i);
     } 

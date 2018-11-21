@@ -14,4 +14,3 @@ function bunnyCounter(num: number): number {
 }
 
 console.log(bunnyCounter(5));
-

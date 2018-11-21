@@ -6,15 +6,15 @@ function readFromFile(fileName: string): string {
     return fs.readFileSync(fileName, 'utf-8');
   } catch (e) {
     console.log(e.message);
-    return 'Unable to read file: myfile.txt';
+    return 'Unable to read file: myfile.txt';//null or exception!
   }
 }
 
-function duplicatedEncryption(fileName) {
-  let crypted: any[] = readFromFile(fileName).split('');
+function duplicatedEncryption(fileName):string {
+  let crypted: string[] = readFromFile(fileName).split(''); //string 
   let decrypted: string[] = [];
 
-  crypted.forEach((element, i) => {
+  crypted.forEach((element:string):any => {
     if (element % 2 !== 0) { 
       decrypted.push(element);
     }
@@ -24,7 +24,7 @@ function duplicatedEncryption(fileName) {
 
 console.log(duplicatedEncryption('duplicated.txt'));
 
-// for EACH 
+// forEach arrow function kibontva:
   //  crypted.forEach(function(e, i, a){
   //    if (i %2 !==0){
   //      decrypted.push(e);

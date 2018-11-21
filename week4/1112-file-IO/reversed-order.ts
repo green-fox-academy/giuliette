@@ -1,6 +1,7 @@
 // Create a method that decrypts reversed-order.txt
 
 let fs = require('fs');
+
  function readFromFile(fileName: string): string {
   try {
     return fs.readFileSync(fileName, 'utf-8');
@@ -10,7 +11,7 @@ let fs = require('fs');
   }
 }
 
-function reverse (fileName) {
+function reverse (fileName):string {
   let unOrdered: string[] = readFromFile(fileName).split('\n');
   let ordered: string[] = [];
 

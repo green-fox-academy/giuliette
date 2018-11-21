@@ -8,15 +8,15 @@ class Thing {
     this.name = name;
   }
 
-  public complete() {
+  public complete():boolean {
     this.completed = true;
   }
 
-  public get Name() {
+  public getName():string { // return types
     return this.name;
   }
 
-  public get Completed() {
+  public getCompleted():boolean {
     return this.completed;
   }
 }

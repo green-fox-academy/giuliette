@@ -22,7 +22,7 @@ let thing4 = new Thing('eat lunch');
 thing3.complete();
 thing4.complete();
 
-fleet.add(thing1);
+fleet.add(thing1); 
 fleet.add(thing2);
 fleet.add(thing3);
 fleet.add(thing4);

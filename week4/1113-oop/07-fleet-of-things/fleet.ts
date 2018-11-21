@@ -1,5 +1,4 @@
 'use strict';
-
 import { Thing } from "./thing";
 
 class Fleet {
@@ -9,7 +8,7 @@ class Fleet {
     this.things = [];
   }
 
-  add(thing: Thing) {
+  add(thing: Thing) { //return type
     this.things.push(thing);
   }
 
@@ -22,7 +21,6 @@ class Fleet {
       }
     });
   }
-
 }
 
 export { Fleet };
