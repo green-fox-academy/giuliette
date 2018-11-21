@@ -6,23 +6,32 @@ import { Plant } from './plant'
 
 export class Garden {
   name: string;
-  numberOfPlants: number;
-  onTheLandscape: Plant [] = [];
+  onTheLandscape: Plant[] = [];
 
-  constructor (name:string, numberOfPlants: number){
+  constructor(name: string) {
     this.name = name;
-    this.numberOfPlants = numberOfPlants;
   }
 
-  add(plant: Plant){
-    //push plant to array
+  add(plant: Plant) {
     this.onTheLandscape.push(plant);
-    this.numberOfPlants += 1;
   }
 
-  watering(){
+  watering(wasser: number): void {
+    let thirsty: Plant[] = [];
     this.onTheLandscape.forEach(element => {
-      console.log(element);
+      if (element.needsWater) {
+        thirsty.push(element);
+      }
+    });
+    let locsolas = wasser / thirsty.length;
+    thirsty.forEach(element => {
+      element.watering(locsolas);
+    })
+  }
+  show() {
+    this.onTheLandscape.forEach(element => {
+      console.log(`The ${element.whatColor()} ${element.whatType()} ${element.needsWater() ? 'needs water' : 'doesnt need water'}`);
     });
   }
+
 }

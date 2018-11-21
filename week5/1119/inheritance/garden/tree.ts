@@ -6,8 +6,7 @@ import { Plant } from './plant';
 // eg. watering with 10 the tree's amount of water should only increase with 4
 
 export class Tree extends Plant {
-  
-  constructor (color: string, waterTrsh: number, absorbtion: number){
-    super(color, waterTrsh, absorbtion);
+  constructor (color: string){
+    super(color, 10, 0.4);
   }
 }

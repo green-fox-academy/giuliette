@@ -1,4 +1,6 @@
-export class Plant {
+import { runInThisContext } from "vm";
+
+export abstract class Plant {
   protected waterLvl: number;
   protected color: string;
   waterTrsh: number;
@@ -15,32 +17,16 @@ export class Plant {
     return this.color;
   }
 
-  needsWater() {
-    return this.waterLvl;
+  needsWater():boolean {
+    return this.waterLvl < this.waterTrsh;
   }
 
-  whatType() {
-    return this.constructor.name; //stringet ad
+  whatType(): string{
+    return this.constructor.name;
   }
 
-  getState() {
-    if (this.whatType() === 'Tree') {
-      if (this.needsWater() < 10) {
-        console.log(`The ${this.whatColor()} ${this.whatType()} needs water`);
-        return true;
-      } else {
-        console.log(`The ${this.whatColor()} ${this.whatType()} doesnt need water`);
-        return false;
-      }
-    } else if (this.whatType() === 'Flower') {
-      if (this.needsWater() < 5) {
-        console.log(`The ${this.whatColor()} ${this.whatType()} needs water`);
-        return true;
-      } else {
-        console.log(`The ${this.whatColor()} ${this.whatType()} doesnt need water`);
-        return false;
-      }
-    }
+  watering(waterGiven: number):void {
+    this.waterLvl = this.waterLvl + waterGiven * this.absorbtion; 
   }
 }
 
