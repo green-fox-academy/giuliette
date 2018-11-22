@@ -9,3 +9,8 @@ test('is anagram', t =>{
   t.equal(actual, expected);
   t.end();
 });
+
+test('is anagram2', t =>{
+  t.ok(anagram('good', 'doog'));
+  t.end();
+});
