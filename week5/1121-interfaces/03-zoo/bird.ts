@@ -10,7 +10,7 @@ export class Bird extends Animal {
     return 'laying eggs';
   }
   getName(): string{
-    return this.name;
+    return name;
   }
 }
 
