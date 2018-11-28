@@ -1,5 +1,4 @@
 'use strict'
-
 import  test  from 'tape';
 import { Apple } from './apples';
 
