@@ -5,33 +5,35 @@ import { Plant } from './plant'
 // eg. watering with 40 and 4 of them need water then each gets watered with 10
 
 export class Garden {
-  name: string;
-  onTheLandscape: Plant[] = [];
+  protected name: string;
+  protected onTheLandscape: Plant[] = [];
 
   constructor(name: string) {
     this.name = name;
   }
 
-  add(plant: Plant) {
+  add(plant: Plant): void { //retrun type
     this.onTheLandscape.push(plant);
   }
 
-  watering(wasser: number): void {
+  watering(waterGiven: number): void {
     let thirsty: Plant[] = [];
     this.onTheLandscape.forEach(element => {
       if (element.needsWater) {
         thirsty.push(element);
       }
     });
-    let locsolas = wasser / thirsty.length;
-    thirsty.forEach(element => {
-      element.watering(locsolas);
+    let watering = waterGiven / thirsty.length;
+    thirsty.forEach(element => { //nameeeeees!
+      element.watering(watering);
     })
   }
-  show() {
+
+  //return!
+  show(): void {
     this.onTheLandscape.forEach(element => {
       console.log(`The ${element.whatColor()} ${element.whatType()} ${element.needsWater() ? 'needs water' : 'doesnt need water'}`);
     });
   }
-
 }
+

@@ -10,3 +10,4 @@ export class Flower extends Plant {
     super(color, 5, 0.75)
   }
 }
+
