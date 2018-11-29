@@ -24,6 +24,24 @@ export class CarPark {
         this.cars.splice(i, 1);
       }
     });
+    let fileContent = readFromFile(fileName);
+    if (fileContent !== null) {
+      let parkPlace: string[][] = fileContent.split('\n').map(e => {
+        return e.split(',');
+      });
+      parkPlace.forEach((element, index) => {
+        if (element[0] === licenseplate) {
+          parkPlace.splice(index, 1);
+        }
+      });
+      let tempString = '';
+      parkPlace.forEach(e => {
+        tempString += e[0] + (',') + e[1] + (',') + e[2] + ('\n');
+      });
+      writeToFile(fileName, tempString);
+    }
   }
+  getOldest() { }
+  getPenalty() { }
 }
 
