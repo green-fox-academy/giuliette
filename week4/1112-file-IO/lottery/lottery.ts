@@ -1,5 +1,6 @@
 'use strict'
-const fs = require 'fs';
+export {};
+let fs = require ('fs');
 
 function readFromFile(fileName: string): string {
     try {
@@ -10,9 +11,16 @@ function readFromFile(fileName: string): string {
     }
   }
 
-  function checkNumbers(fileName: string): string {
+  function checkNumbers(fileName: string) {
     const fileContent = readFromFile(fileName);
     if (fileContent !== null) {
-      
+      let line = fileContent.split('\n');
+      for (let i = 0; i < line.length; i++) {
+        let lotteryNumbers: string[][] = [];
+        lotteryNumbers.push(line[i].split(';').splice(-5, 5));
+        console.log(lotteryNumbers);
+      }
     }
   }
+
+  checkNumbers('lottery.csv');
