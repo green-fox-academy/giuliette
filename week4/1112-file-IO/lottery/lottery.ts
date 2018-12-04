@@ -15,12 +15,29 @@ function readFromFile(fileName: string): string {
     const fileContent = readFromFile(fileName);
     if (fileContent !== null) {
       let line = fileContent.split('\n');
+      let lotteryNumbers: string[][] = [];
+      let commonNumbers = {};
+
       for (let i = 0; i < line.length; i++) {
-        let lotteryNumbers: string[][] = [];
         lotteryNumbers.push(line[i].split(';').splice(-5, 5));
-        console.log(lotteryNumbers);
+        //console.log(lotteryNumbers);
       }
+
+      for (let i = 0; i < lotteryNumbers.length; i++) {
+        for (let j = 0; j < lotteryNumbers[i].length; j++) {
+          //console.log(lotteryNumbers[i][j]);
+          if(commonNumbers[lotteryNumbers[i][j]] !== undefined) { //undefined = false-nak felel meg.
+            (commonNumbers[lotteryNumbers[i][j]])++;
+          } else {
+            (commonNumbers[lotteryNumbers[i][j]]) =1;
+          }
+        }
+      }
+      Object.keys(commonNumbers).sort(function(a,b) {
+        return commonNumbers[a] - commonNumbers[b];
+      })
     }
   }
 
   checkNumbers('lottery.csv');
+  
