@@ -1,0 +1,37 @@
+body{
+  background-color: aliceblue;
+}
+
+.wrapper{
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid black;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  width: 800px;
+}
+
+.container {
+  align-items: center;
+  height: 80%;
+  width: 90%; 
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+.green {
+  background-color: #64D536;
+}
+
+.yellow {
+  background-color: #FBD64A;
+}
+
+.purple{
+  background-color: #B350F7;
+}
