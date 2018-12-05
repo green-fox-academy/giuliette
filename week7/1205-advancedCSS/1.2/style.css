@@ -1,0 +1,36 @@
+body{
+  background-color: aliceblue;
+}
+/* 
+.wrapper{
+  background-color: #fff;
+  padding: 5%;
+  max-width: 1320px;
+  max-height: 400px;
+} */
+
+.container {
+  align-items: center;
+  height: 400;
+  width: 960;
+  display: flex;
+}
+
+.item {
+  flex-grow: 1;
+  min-width: 100px;
+  min-height: 150px;
+}
+
+.green {
+  background-color: #64D536;
+}
+
+.yellow {
+  flex-grow: 4;
+  background-color: #FBD64A;
+}
+
+.purple{
+  background-color: #B350F7;
+}
