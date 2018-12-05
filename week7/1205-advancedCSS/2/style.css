@@ -1,0 +1,24 @@
+  /* The items should have fixed sizes
+  The purple item should be centered in the yellow area */
+
+  body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    align-self: center;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    height: 280px;
+    width: 760px;
+  }
+  
+  .item {
+    align-self: center;
+    background-color: purple;
+    height: 108px;
+    width: 108px;
+  }
