@@ -16,6 +16,6 @@ export class Apple {
   }
 }
 
-let goldenApple = new Apple;
+let goldenApple = new Apple();
 
-console.log(goldenApple.getApple());  
+console.log(goldenApple.getApple());

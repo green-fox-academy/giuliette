@@ -17,5 +17,4 @@ test('inkamount changes when used', t => {
   let expected = 90;
   t.notEqual(actual, expected);
   t.end();
-})
-//
+});

@@ -5,8 +5,8 @@ test('add 3 numbers', t => {
   const summing = new Sum();
   let listForTesting = [1, 2, 3];
 
-  var actual = summing.addNum(listForTesting);
-  var expected = 6;
+  let actual = summing.addNum(listForTesting);
+  let expected = 6;
   
   t.equal(actual, expected);
   t.end();
