@@ -3,11 +3,11 @@
 class Deck {
 	constructor() {
 		this.deck = []
-		this.dealt_cards = []
+		this.dealtCards = []
 	}
 
 	// generates a deck of cards
-	generate_deck() {
+	generateDeck() {
 		// creates card object
 		let card = (suit, value) => {
 			this.name = value + ' of ' + suit;
@@ -28,15 +28,40 @@ class Deck {
 	}
 
 	// prints the deck of card objects
-	print_deck() {
-		for (let c = 0; c < this.deck.length; c++) {
-			console.log(this.deck[c]);
+	printDeck() {
+		if (this.deck.length == 0){
+			console.log('deck is empty right now.')
+		} else {
+			for (let card = 0; card < this.deck.length; card++) {
+				console.log(this.deck[card]);
+			}
 		}
+	}
+
+	suffleDeck(){
+		let currentIndex = this.deck.length, tempValue, randomIndex;
+
+		while (0 != currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+			tempValue = this.deck[currentIndex];
+			this.deck[currentIndex] = this.deck[randomIndex];
+			this.deck[randomIndex] = tempValue;
+		}
+	}
+
+	deal () {
+		let dealtCards = this.deck.shift();
+		this.dealtCards.push(dealtCards);
+		return dealtCards;
 	}
 }
 
 const deck = new Deck;
 
-deck.generate_deck();
-deck.print_deck();
+deck.generateDeck();
 
+deck.suffleDeck();
+//deck.printDeck();
+
+console.log(deck.deal());
