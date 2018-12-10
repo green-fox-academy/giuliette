@@ -1,5 +1,8 @@
+.DS_Store
 */.DS_Store
 ../.DS_Store
+*../.DS_Store
+
 valami.ts
 ../1006temp/
 node_modules/
