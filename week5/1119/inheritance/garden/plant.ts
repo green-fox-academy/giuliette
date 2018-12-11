@@ -10,8 +10,8 @@ export abstract class Plant {
     this.waterTrsh = waterTrsh;
     this.absorbtion = absorbtion;
   }
-  //return!!!
-  whatColor() {
+  
+  whatColor(): string {
     return this.color;
   }
 

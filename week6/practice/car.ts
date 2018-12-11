@@ -15,7 +15,7 @@ export class Car {
     this.manufactureYear = manufactureYear;
   }
 
-  getHasparkingTicket(){
+  getHasParkingTicket(){
     return this.hasParkingTicket;
   }
 
@@ -23,7 +23,7 @@ export class Car {
     return this.licensePlate;
   }
 
-  getmanufactureYear(){
+  getManufactureYear(){
     return this.manufactureYear;
   }
 }
