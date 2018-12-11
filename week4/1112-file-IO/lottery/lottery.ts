@@ -33,8 +33,10 @@ function checkNumbers(fileName: string) {
         }
       }
     }
-    return Object.keys(commonNumbers).sort((a, b) => commonNumbers[b] - commonNumbers[a]).splice(0, 5);
+    return Object.keys(commonNumbers).sort((a, b) => commonNumbers[b] - commonNumbers[a]).slice(0, 5);
   }
 }
 
 console.log(checkNumbers('lottery.csv'));
+
+//beolvas's, for, for eredmeny
