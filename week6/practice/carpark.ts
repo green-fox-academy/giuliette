@@ -1,6 +1,5 @@
 import { readFromFile, writeToFile, appendToFile } from './fileIO';
 import { Car } from './car'
-import { isNull } from 'util';
 
 // it should have a carPark array of Cars
 // addCar() method which add's a new car to the carPark
@@ -17,7 +16,7 @@ export class CarPark {
   }
 
   addCarToFile(car: Car, fileName: string): void {
-    appendToFile(fileName, `\n${car.getLicensePlate()},${car.getmanufactureYear()},${car.getHasparkingTicket()}`);
+    appendToFile(fileName, `\n${car.getLicensePlate()},${car.getManufactureYear()},${car.getHasParkingTicket()}`);
   }
 
   removeCar(licenseplate: string, fileName: string): void {
@@ -65,7 +64,7 @@ export class CarPark {
         return new Car(parseInt(line.split(',')[2]),line.split(',')[0],parseInt(line.split(',')[1]));
       });
       carList.sort((a, b) => {
-        return a.getmanufactureYear() - b.getmanufactureYear();
+        return a.getManufactureYear() - b.getManufactureYear();
       });
       return carList[0].getLicensePlate();
     }

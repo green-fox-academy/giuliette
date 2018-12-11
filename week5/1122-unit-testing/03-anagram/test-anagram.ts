@@ -11,6 +11,13 @@ test('is anagram', t =>{
 });
 
 test('is anagram2', t =>{
+  var actual = anagram('Béla kék az ég', 'doog');
+  var expected = true;
+  t.ok(anagram(actual, expected);
+  t.end();
+});
+
+test('with spaces', t =>{
   t.ok(anagram('good', 'doog'));
   t.end();
 });
