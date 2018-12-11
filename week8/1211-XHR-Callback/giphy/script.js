@@ -15,4 +15,11 @@ const sendHTTPRequest = (url, method, callback) => {
 
 sendHTTPRequest(URL, 'GET', (response) => {
   console.log(response);
+  let navParent = document.querySelector('.wrapper');
+  response.forEach(picture => {
+    //console.log(picture);
+    let newThumbnail = document.createElement('img');
+    navParent.appendChild(newThumbnail);
+    newThumbnail.setAttribute('src', picture.images['480w_still'].url);
+  });
 });
