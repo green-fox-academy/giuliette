@@ -10,26 +10,35 @@ xhr.onreadystatechange = () => {
     if (xhr.status === 200) {
       const nytResponse = JSON.parse(xhr.responseText).response.docs;
       const docBody = document.querySelector('body');
+
       let articles = document.querySelector('.wrapper');
 
       for (let i = 0; i < nytResponse.length; i++) {
         let newArticle = document.createElement('article');
-        articles.appendChild(newArticle);
-
         let newArticleHeadline = document.createElement('h1');
-        newArticle.innerText = nytResponse[i].headline.main;
-        newArticle.appendChild(newArticleHeadline);
-
         let newArticleText = document.createElement('h2');
-        newArticleText.innerText = nytResponse[i].snippet;
+        let date = document.createElement('date');
+        let aTag = document.createElement('a');
+
+        articles.appendChild(newArticle);
+        newArticle.appendChild(newArticleHeadline);
         newArticle.appendChild(newArticleText);
-
-        let date = document.createElement('p');
-        date.innerText = nytResponse[i].pub_date;
         newArticle.appendChild(date);
-      }
+        
+        aTag.setAttribute('href', nytResponse[i].web_url);
+        aTag.innerText = nytResponse[i].headline.main;
 
-      //create link
+        newArticleHeadline.appendChild(aTag);
+
+        newArticleText.innerText = nytResponse[i].snippet;
+        
+        if (typeof nytResponse[i].pub_date !== 'undefined') {
+          date.innerText = nytResponse[i].pub_date.slice(0, 10);
+        } else {
+          date.innerText = nytResponse[i].pub_date;
+          //date undefined.
+        }
+      }
     }
   }
 }
