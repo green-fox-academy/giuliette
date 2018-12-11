@@ -5,14 +5,13 @@ class BassGuitar extends StringedInstrument {
     super(numberOfStrings, 'Bass Guitar');
   }
   
-  play(){
+  play(): void{
     console.log(`${this.name}, a ${this.numberOfStrings}-stringed instrument that goes ${this.sound()}`)
   }
 
-  sound(){
+  sound(): string{
     return 'Duum-duum-duum';
   }
-
 }
 
 let bassGuitar = new BassGuitar();
