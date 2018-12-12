@@ -1,0 +1,16 @@
+/* Vendor Prefixes
+Every current browser supports box-sizing: border-box; unprefixed, 
+so the need for vendor prefixes is fading. 
+But, if you need to support older versions of Safari (< 5.1), Chrome (< 10), and Firefox (< 29), 
+you should include the prefixes -webkit and -moz, like this: */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
