@@ -11,10 +11,6 @@ export class Deck {
   // private value: string;
 
   constructor(){
-<<<<<<< HEAD
-=======
-    this.name = 
->>>>>>> bdd9219b2beca24ad52d6b71f56be648fad48021
     this.deck = [];
     this.dealtCards= [];
     this.suit = '';
