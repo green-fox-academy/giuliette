@@ -11,7 +11,7 @@ button.addEventListener('click', (event) => {
 
 // onclick vs addEventListener
 // onclick: only one listener can be set, the second will overwrite the previous one
-// button.onclick = () => alert(1);
+button.onclick = () => alert(1);
 
 // if you want to remove a listener, you have to use a variable
 // remember same is not the same :)
