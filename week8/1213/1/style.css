@@ -38,7 +38,7 @@ legend {
 label, input {
   cursor: pointer;
   display: table-cell;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   margin-bottom: 10px;
   width: 100%;
@@ -56,12 +56,32 @@ input[type="text"] {
 
 input[type="password"] {
   background: url(img/eye7-01-512.png) no-repeat;
+  background-position: 98%;
+  background-size: 40px;
   height: 50px;
+  align-self: flex-end;
 }
 
-input[type="text"]:focus {
+
+input[type=text],
+input[type=password] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
   outline: none;
-  border-color: limegreen;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+ 
+input[type=text]:focus, 
+input[type=password ]:focus {
+  box-shadow: 0 0 5px rgb(28, 224, 182);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(28, 221, 182, 0.733);
 }
 
 .password {
@@ -79,3 +99,9 @@ button {
   margin: 0;
   padding: 10px 50px;
 }
+
+button:focus {
+  outline: none;
+}
+
+
