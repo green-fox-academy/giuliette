@@ -7,3 +7,19 @@
   min-width: 400px;
   border: 1px solid grey;
 }
+
+article {
+  border: 1px solid red;
+}
+
+h1 {
+  background: grey;
+}
+
+h2{
+  background: lightgrey;
+}
+
+date {
+  
+}
