@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/green-fox-academy/giuliette#readme",
   "dependencies": {
-    "@types/node": "^10.12.5"
+    "@types/node": "^10.12.5",
+    "express": "^4.16.4"
   },
   "devDependencies": {}
 }
