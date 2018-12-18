@@ -1,4 +1,6 @@
 # giuliette
+
+
 [GitHub](https://github.com/green-fox-academy/giuliette.git)
 
 [Hello World](https://github.com/giuliette/hello-world.git)
@@ -7,4 +9,4 @@
 
 [Really-Syllabus](https://github.com/green-fox-academy/really-syllabus)
 
-[todo application](https://github.com/giuliette/todo-app)
+[TODO application](https://github.com/giuliette/todo-app)
