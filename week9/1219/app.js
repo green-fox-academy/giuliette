@@ -28,6 +28,19 @@ app.get('/doubling', (req, res) => {
   }
 });
 
+app.get('/greeter', (req, res) => {
+  const { name } = req.query;
+  const { title } = req.query;
+  if (name && title) {  
+    const resObj = {
+      'welcome_message': `Oh, hi there ${name}, my dear ${title}!`
+    }
+    res.json(resObj);
+  } else {
+    res.json({ 'error': 'input needed' })
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
