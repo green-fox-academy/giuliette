@@ -41,6 +41,40 @@ app.get('/greeter', (req, res) => {
   }
 });
 
+// app.get('/appenda', (req, res) => {
+//   const {word} = req.query;
+//   if (word){
+//     const resObj = {
+//       'appended text': `${word}+a`
+//     }
+//     res.json({resObj});
+//   } 
+// });
+
+// app.get('/appenda/:input', (req, res) => {
+//   const {word} = req.params;
+//   if (word){
+//     const resObj = {
+//       'appended text': `${word}+a`
+//     }
+//     res.json({resObj});
+//   } else {
+//     res.json({'error': '404'})
+//   }
+// });
+
+app.get('/appenda/:input', (req, res) => {
+  const input = req.params.input;
+  if (input) {
+    const resObject = {
+      'appended': input + 'a'
+    }
+    res.json(resObject);
+  } else {
+    res.json({ 'error': '404' });
+  }
+ });
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
