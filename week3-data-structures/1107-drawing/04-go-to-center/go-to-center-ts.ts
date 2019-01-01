@@ -12,15 +12,15 @@ const ctx = canvas.getContext('2d');
 
 // 600 x 400
 
-function drawing (x, y) {
+function drawing(x, y) {
   ctx.strokeStyle = 'red';
   ctx.beginPath();
   ctx.moveTo(300, 200);
-  ctx.lineTo (x, y);
+  ctx.lineTo(x, y);
   ctx.stroke();
-} 
+}
 
-for (let i = 0; i < 3; i++){
+for (let i = 0; i < 3; i++) {
   drawing(i * 20 + 200, 100);
 }
 
