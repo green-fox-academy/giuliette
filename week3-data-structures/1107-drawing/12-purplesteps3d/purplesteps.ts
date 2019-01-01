@@ -1,4 +1,3 @@
-
 'use strict';
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
@@ -8,17 +7,6 @@ const ctx = canvas.getContext('2d');
 
 // Reproduce this:
 // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps/r3.png]
-/* first try 
-function rectangles(x, y, a) {
-  ctx.fillStyle = 'purple';
-  ctx.fillRect(x, y, x, x);
-}
-
-let square 
-for (let i = 1; i < 6; i++) {
-  rectangles(Math.sqrt(i),Math.sqrt(i));
-}
-*/
 
 let start: number = 10;
 let addstart: number = 5;

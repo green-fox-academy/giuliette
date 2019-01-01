@@ -36,14 +36,14 @@ function connectDots(arr: number[][]): void {
   let lastIndex: number = arr.length - 1;
   for (let i: number = 0; i <= lastIndex; i++) {
     if (i < lastIndex) {
-      drawLine(arr[i], arr[i + 1]);
+      draw(arr[i], arr[i + 1]);
     } else {
-      drawLine(arr[lastIndex], arr[0]);
+      draw(arr[lastIndex], arr[0]);
     }
   }
 }
 
-function drawLine(from: number[], to: number[]) {
+function draw(from: number[], to: number[]) {
   ctx.beginPath();
   ctx.strokeStyle = "green";
   ctx.moveTo(from[0], from[1]);
