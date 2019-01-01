@@ -1,0 +1,35 @@
+  /* The items should have fixed sizes
+  The purple item should be centered in the yellow area */
+
+  body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    height: 280px;
+    width: 760px;
+    align-self: center;
+    background-color: yellow;
+    display: flex;
+
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+  }
+
+  li {
+    margin-right: 10px;
+    align-self: center;
+    background-color: purple;
+    height: 108px;
+    width: 108px;
+  }
+

@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  text-align: center;
+}
+
+button {
+  margin: 16px;
+}
+
+.img-inspector {
+  margin: 0 auto;
+  width: 500px;
+  height: 320px;
+  border: 1px solid #3a3a3a;
+  background-image: url("./background-blur-clean-531880.jpg");
+  /* background-size: 200%; */
+}

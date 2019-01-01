@@ -1,0 +1,39 @@
+body {
+  background-color: aliceblue;
+}
+
+.container {
+  align-content: center;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  align-items: center;
+  height: 300;
+  width: 960;
+  display: flex;
+
+}
+
+.item {
+  flex-grow: 1;
+  min-width: 100px;
+  min-height: 200px;
+}
+
+.green {
+  flex-grow: 1;
+  background-color: #64D536;
+  margin: 0 0 0 20px;
+}
+
+.yellow {
+  flex-grow: 4;
+  background-color: #FBD64A;
+}
+
+.purple {
+  flex-grow: 1;
+  margin: 0 20px 0 0;
+  background-color: #B350F7;
+}

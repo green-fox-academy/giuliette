@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>
+    cocktails
+  </title>
+</head>
+
+<body>
+  <h1>
+    Cocktails
+  </h1>
+  <div>
+    <a href="/">all</a>
+    <% alcohols.forEach(e=>{ %>
+    <a href="?alcohol=<%= e %>">
+      <%= e %>
+    </a>
+    <% }); %>
+  </div>
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>Price</td>
+    </tr>
+    <% cocktails.forEach(cocktail=>{ %>
+    <tr>
+      <td>
+        <div>
+          <% if(cocktail.isAlcoholic){ %>
+          <%= cocktail.name %>
+          <%  } else { %>
+          <%= cocktail.name %> (non-alcoholic)
+          <% } %>
+        </div>
+        <div>
+          <% cocktail.contains.forEach(ingr=>{ %>
+          <span>
+            <%= ingr %>
+          </span>,&nbsp;
+          <% }); %>
+        </div>
+      </td>
+      <td>
+        <%= cocktail.price %> Ft
+      </td>
+    </tr>
+    <% }); %>
+  </table>
+
+</body>
+
+</html>

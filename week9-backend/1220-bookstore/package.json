@@ -1,0 +1,17 @@
+{
+  "name": "1220",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bookstore/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 1220/bookstore/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "mysql": "^2.16.0"
+  }
+}

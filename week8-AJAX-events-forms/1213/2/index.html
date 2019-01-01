@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <form method="POST" action="index.html" name="subscribe" onsubmit="">
+
+      <fieldset>
+        <div class="form-input-animal">
+          <legend>what is your favourite pet?</legend>
+          <div class="dog">
+            <input type="radio" id="radio1_input" name="animal" value="female">
+            <label for="radio1_input">dog <span>🐈</span></label>
+          </div>
+          <div class="cat">
+            <input type="radio" id="radio2_input" name="animal" value="male">
+            <label for="radio2_input">cat <span>🐕</span></label>
+          </div>
+          <div class="fish">
+            <input type="radio" id="radio3_input" name="animal" value="male">
+            <label for="radio3_input">I only like Viktor, the 🐟</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="form-input-subscription">
+          <legend>do you want to sign up for cat facts?</legend>
+          <input type="radio" id="facts_input1" name="cat-facts" value="yes">
+          <label for="facts_input1">yes</label>
+          <input type="radio" id="facts_input2" name="cat-facts" value="no">
+          <label for="facts_input2">no</label>
+        </div>
+      </fieldset>
+
+      <input type="submit" name="button" id="love-cats" value="love cats" disabled="disabled">
+      <input type="submit" name="button" id="signup" value="sign up" disabled="disabled">
+      
+    </form>
+  </div>
+
+  <srcipt src="script.js" type="text/javascript"></srcipt>
+</body>
+
+</html>
