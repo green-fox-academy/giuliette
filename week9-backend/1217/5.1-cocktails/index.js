@@ -2,6 +2,35 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+app.use('/assets', express.static('assets')); //static from this folder
+
+// home page
+app.get('/', (req, res) => {
+
+  let filtered = [];
+
+  if (req.query.alcohol) {
+    cocktails.forEach(element => {
+      element.contains.forEach(e => {
+        if (req.query.alcohol === e) {
+          filtered.push(element);
+        }
+      });
+    });
+    res.render('home', {
+      cocktails: filtered
+    });
+  } else {
+    res.render('home', {
+      cocktails: cocktails
+    });
+  }
+});
+// https://github.com/green-fox-academy/teaching-materials/tree/master/workshop/ui-development/tables
+// /?alcohol={alcholType}
+
 const cocktails = [
   { name: 'GIN FIZZ', price: 1520, contains: ['gin', 'sugar', 'lemon juice', 'soda'], isAlcoholic: true },
   { name: 'BLOODY MARY', price: 1650, contains: ['vodka', 'tomato juice', 'spices'], isAlcoholic: true },
@@ -12,29 +41,8 @@ const cocktails = [
   { name: 'VIRGIN MOJITO', price: 990, contains: ['sugar', 'lime juice', 'soda water'], isAlcoholic: false },
   { name: 'SAFE SEX ON THE BEACH', price: 990, contains: ['peach schnapps', 'orange juice', 'cranberry juice'], isAlcoholic: false },
 ];
-
 const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
 
-app.use('/assets', express.static('assets'));
-// set the view engine to ejs
-app.set('view engine', 'ejs');
-
-// home page
-app.get('/', (req, res) => {
-  const { alcohol, all } = req.query;
-  if (alcohol) {
-    res.render('home', {
-      cocktails: cocktails.filter(e => e.contains.includes(alcohol)),
-      alcohols: alcoholList
-    });
-  } else {
-    res.render('home', {
-      cocktails: cocktails,
-      alcohols: alcoholList
-    });
-  }
-
-});
 
 // start express app on port 3000
 app.listen(PORT, () => {
