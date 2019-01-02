@@ -1,4 +1,5 @@
 'use strict';
+export { };
 
 const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
@@ -21,6 +22,7 @@ function hexagon(x: number, y: number): void {
 
 hexagon(canvas.width / 2, canvas.height / 2);
 hexagon(canvas.width / 2, canvas.height / 2 - radius * 2);
+hexagon(canvas.width / 2, canvas.height / 2 + radius * 2);
 
 
 
