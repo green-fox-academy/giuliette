@@ -28,22 +28,23 @@ thead {
   text-align: center;
 }
 
-tr {
-  border: 1px solid black;
+h1 {
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-h1 {
-  margin-bottom: 20px;
-  font-weight: bold;
+tr th {
+  padding: 10px;
 }
 
 tbody tr:first-child {
+  margin: 10px;
   background: darkgrey;
   text-transform: uppercase;
   text-align: left;
   padding: 10px;
 }
 
-tbody tr:nth-child(even){
+tbody tr:nth-child(odd){
   background-color: #CCCCCC;
 } 
