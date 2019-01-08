@@ -1,0 +1,45 @@
+body {
+  background-color: #dddddd;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+}
+
+.item {
+  min-width: 100px;
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.one {
+  background-color: lightgreen;
+}
+
+.two {
+  background-color: lightcyan;
+  flex-grow: 2;
+}
+
+.three {
+  background-color: lightpink;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  .container {
+    flex-direction: row;
+  } 
+
+  .two {
+    flex-grow: 1;
+  }
+}
