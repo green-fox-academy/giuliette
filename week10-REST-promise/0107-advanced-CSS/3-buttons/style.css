@@ -1,0 +1,65 @@
+body {
+  background-color: #dddddd;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #322A63;
+  display: flex;
+  margin: 50px;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px;
+  width: 700px;
+}
+
+button {
+  text-transform: capitalize;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: #ddd;
+  margin: 40px;
+  padding: 10px;
+  height: 55px;
+  width: 140px;
+
+}
+
+/* The hover should be slightly (~10%) brighter */
+button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+/* The active state should be slightly (~10%) darker */
+button:active {
+  filter: brightness(90%);
+}
+
+.blue {
+  background-color:#445EA9;
+}
+
+.green {
+  background-color: #00B654;
+}
+
+.red {
+  background-color: #E53318;
+}
+
+.light {
+  background-color: #00AEF5;
+}
+
+.black {
+  background-color: #282251;
+}
+
+.white{
+  background-color:#F5F7FD;
+  color: #282251;
+}
