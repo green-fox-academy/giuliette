@@ -1,10 +1,9 @@
-#media-query-tester{
+/* #media-query-tester{
   z-index: 1;
   height: 100px;
   width: 100px;
   position: relative;
-
-}
+} */
 
 table {
   border-collapse: collapse;
