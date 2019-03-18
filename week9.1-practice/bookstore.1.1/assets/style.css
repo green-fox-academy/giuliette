@@ -1,0 +1,18 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: lightgoldenrodyellow;
+}
+
+table {
+  border: 1px solid coral;
+  border-collapse: collapse;
+}
+
+tr {
+  border-bottom: 1px solid grey;
+}
+
+th {
+  background-color: black;
+  color: turquoise;
+}

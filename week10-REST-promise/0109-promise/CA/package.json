@@ -1,0 +1,21 @@
+{
+  "name": "CA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "random-secret.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1"
+  }
+}
